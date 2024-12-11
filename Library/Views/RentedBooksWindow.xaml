@@ -1,0 +1,18 @@
+﻿<Window x:Class="Library.Views.RentedBooksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rented Books" Height="450" Width="800">
+    <Grid>
+        <ListView Name="RentedBooksListView" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Rented_Books_ID}" Width="50"/>
+                    <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding Book_ID}" Width="100"/>
+                    <GridViewColumn Header="User ID" DisplayMemberBinding="{Binding User_ID}" Width="100"/>
+                    <GridViewColumn Header="Start Date" DisplayMemberBinding="{Binding Time_start_rent}" Width="150"/>
+                    <GridViewColumn Header="Return Date" DisplayMemberBinding="{Binding Time_rent}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

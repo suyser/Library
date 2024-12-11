@@ -1,0 +1,17 @@
+﻿<Window x:Class="Library.Views.BooksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Books" Height="450" Width="800">
+    <Grid>
+        <ListView Name="BooksListView" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Book_Info_ID}" Width="50"/>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Автор" DisplayMemberBinding="{Binding Author}" Width="150"/>
+                    <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding Quantity}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

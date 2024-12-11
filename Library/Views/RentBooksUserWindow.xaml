@@ -1,0 +1,26 @@
+﻿<Window x:Class="Library.Views.RentBooksUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Арендованные книги" Height="500" Width="800">
+    <Grid>
+        <!-- Список арендованных книг -->
+        <ListView Name="RentedBooksListView" Margin="10,10,10,59" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID книги" DisplayMemberBinding="{Binding Book_ID}" Width="50"/>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Автор" DisplayMemberBinding="{Binding Author}" Width="150"/>
+                    <GridViewColumn Header="Начало аренды" DisplayMemberBinding="{Binding TimeStartRent}" Width="150"/>
+                    <GridViewColumn Header="Конец аренды" DisplayMemberBinding="{Binding TimeRent}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+        <!-- Кнопка для возврата книги -->
+        <Button Content="Вернуть книгу" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="50" Margin="362,0,0,9" Click="ReturnBookButton_Click"/>
+
+        <!-- Кнопка для открытия доступных книг -->
+        <Button Content="Доступные книги" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="200" Height="50" Margin="10,0,10,9" Click="AvailableBooksButton_Click"/>
+    </Grid>
+</Window>

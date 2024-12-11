@@ -1,0 +1,17 @@
+﻿<Window x:Class="Library.Views.AvailableBooksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Доступные книги" Height="500" Width="800">
+    <Grid>
+        <ListView Name="AvailableBooksListView" Margin="10,10,10,59">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID книги" DisplayMemberBinding="{Binding Book_ID}" Width="50"/>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Автор" DisplayMemberBinding="{Binding Author}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Арендовать книгу" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="50" Margin="362,0,0,9" Click="RentBookButton_Click"/>
+    </Grid>
+</Window>

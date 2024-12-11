@@ -1,0 +1,16 @@
+﻿<Window x:Class="Library.Views.UsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Пользователи" Height="400" Width="600">
+    <Grid>
+        <ListView Name="UsersListView" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding User_ID}" Width="50"/>
+                    <GridViewColumn Header="Полное имя" DisplayMemberBinding="{Binding Full_Name}" Width="200"/>
+                    <GridViewColumn Header="Роль" DisplayMemberBinding="{Binding Role}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
